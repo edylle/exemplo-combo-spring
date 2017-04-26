@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" charset="UTF-8" />
+	
+	<title>Exemplo de Combo</title>
+	
+	<link rel="stylesheet" type="text/css" th:href="@{/css/vendor/bootstrap.min.css}" />
+	
+	<script type="text/javascript" th:src="@{/js/vendor/jquery-3.1.1.min.js}"></script>
+</head>
+
+<body>
+
+	<section>
+
+		<form class="form-horizontal" method="post" th:action="@{/comboController/salvar-loja}" th:object="${loja}">
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+	
+					<input type="hidden" th:field="*{id}" />
+	
+					<div class="form-group">
+						<label for="nome" class="col-sm-2 control-label">Nome</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="nome" th:field="*{nome}" />
+						</div>
+					</div>
+	
+					<div class="form-group">
+						<label for="cliente" class="col-sm-2 control-label">Cliente</label>
+		
+						<div class="col-sm-4">
+							<select id="cliente" class="form-control custom" name="cliente"	th:field="*{cliente}">
+								<option value="" class="select-option">- Selecione o Cliente -</option>
+								<option th:each="cliente : ${todosClientes}"
+									    th:value="${cliente.id}" th:text="${cliente.nome}"
+									    class="select-option"></option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+
+		</form>
+
+	</section>
+
+
+	<script type="text/javascript" th:src="@{/js/vendor/bootstrap.min.js}"></script>
+
+</body>
+
+</html>
