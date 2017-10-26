@@ -1,4 +1,5 @@
 # exemplo-combo-spring
-Pequeno projeto criado com base em uma dúvida da usuária Day Claudino na comunidade Java da Algaworks no Facebook
+Simple project created to help user Day Claudino at Algaworks's Java community in Facebook.
+Click <a href="https://www.facebook.com/groups/1467881680180826/permalink/1688791508089841/">here</a> to check the thread.
 
-- Após subir a aplicação, é possível acessar a página de exemplo através do seguinte endereço: http://localhost:8080/combo/comboController
+- After the application is started, it is possible to access the example page with the following URI: http://localhost:8080/combo/comboController
